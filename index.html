@@ -46,12 +46,12 @@
         }
         .info-box {
            position: fixed;
-    top: 50%; /* 화면 중앙에 위치 */
-    left: 50%;
-    transform: translate(-50%, -50%); /* 가운데 정렬 */
-    width: 90%; /* 모바일 화면에 맞게 폭 조정 */
-    max-width: 500px; /* 최대 크기 제한 */
-    height: 80%; /* 높이를 화면 비율에 맞춤 */
+           top: 50%; /* 화면 중앙에 위치 */
+           left: 50%;
+           transform: translate(-50%, -50%); /* 가운데 정렬 */
+           width: 90%; /* 모바일 화면에 맞게 폭 조정 */
+           max-width: 500px; /* 최대 크기 제한 */
+            height: 80%; /* 높이를 화면 비율에 맞춤 */
             background-color: rgba(255, 255, 255);
             color: rgb(0, 0, 0);
             padding: 20px;
@@ -59,6 +59,16 @@
             align-items: center;
             overflow-y: auto;
             z-index: 1000;
+        }
+        .info-box h1{
+            font-size: 20px; /* 글자 크기 화면 높이 기준 */
+            font-family: "pretendard", sans-serif;
+            font-weight: 600;
+        }
+        .info-box p{
+            font-size: 11px; /* 글자 크기 화면 높이 기준 */
+            font-family: "pretendard", sans-serif;
+            font-weight: 300;
         }
         .info-box img {
             max-width: 100%;
