@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'psq7efc',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+    <title>Vertical Numbers</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .container {
+            scroll-snap-type: y mandatory; /* 세로 스크롤 스냅 */
+            overflow-y: scroll;
+            height: 100vh; /* 전체 화면 높이를 기준으로 */
+        }
+        .number {
+            scroll-snap-align: start; /* 스냅 포인트 설정 */
+            font-size: 100vh; /* 글자 크기 화면 높이 기준 */
+            font-family: "pretendard", sans-serif;
+            font-weight: 300;
+            line-height: 100vh; /* 글자 높이 화면 기준 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh; /* 각 섹션을 전체 화면 높이로 */
+        }
+        .one {
+            color: black;
+            background-color: white;
+        }
+        .two {
+            color: white;
+            background-color: black;
+        }
+        .info-box {
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .info-box img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 50px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ① 클릭 시 링크로 이동 -->
+        <div class="number one" onclick="window.location.href='https://www.instagram.com/p/DCLf43-Pfef/?img_index=1';">①</div>
+        <!-- ② 클릭 시 박스 생성 -->
+        <div class="number two" onclick="showInfoBox()">②</div>
+
+            <!-- 의자 정보 박스 -->
+        <div id="infoBox" class="info-box" style="display: none;">
+        <button class="close-btn" onclick="closeInfoBox()">×</button>
+        <h1>의자 정보</h1>
+        <p>
+            이 의자는 20세기 디자인을 대표하는 아이코닉한 작품입니다.
+            실용성과 예술성을 결합하여 현대 가구 디자인의 기준을 세웠습니다.
+        </p>
+        <img src="https://via.placeholder.com/800x400" alt="의자 이미지">
+        </div>
+
+    <script>
+        // 박스 표시
+        function showInfoBox() {
+            const infoBox = document.getElementById('infoBox');
+            infoBox.style.display = 'block';
+        }
+
+        // 박스 닫기
+        function closeInfoBox() {
+            const infoBox = document.getElementById('infoBox');
+            infoBox.style.display = 'none';
+        }
+    </script>
+
+    </div>
+</body>
+</html>
