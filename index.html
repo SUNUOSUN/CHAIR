@@ -21,6 +21,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            background-color: rgb(255, 255, 255);
         }
         .container {
             scroll-snap-type: y mandatory; /* 세로 스크롤 스냅 */
@@ -29,7 +30,7 @@
         }
         .number {
             scroll-snap-align: start; /* 스냅 포인트 설정 */
-            font-size: 40vh; /* 글자 크기 화면 높이 기준 */
+            font-size: 50vh; /* 글자 크기 화면 높이 기준 */
             font-family: "pretendard", sans-serif;
             font-weight: 300;
             display: flex;
@@ -39,23 +40,19 @@
         }
         .one {
             color: black;
-            background-color: white;
         }
         .two {
-            color: white;
-            background-color: black;
+            color: rgb(0, 0, 0);
         }
         .info-box {
             position: fixed;
-            top: 10%;
-            left: 10%;
-            width: 80%;
-            height: 80%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
+            width: 500px;
+            height: 70%;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: rgb(0, 0, 0);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
             overflow-y: auto;
             z-index: 1000;
         }
@@ -69,7 +66,7 @@
             top: 10px;
             right: 10px;
             font-size: 50px;
-            color: white;
+            color: rgb(0, 0, 0);
             cursor: pointer;
             background: none;
             border: none;
@@ -86,12 +83,11 @@
             <!-- 의자 정보 박스 -->
         <div id="infoBox" class="info-box" style="display: none;">
         <button class="close-btn" onclick="closeInfoBox()">×</button>
-        <h1>의자 정보</h1>
+        <h1>Chair-Wear</h1>
         <p>
-            이 의자는 20세기 디자인을 대표하는 아이코닉한 작품입니다.
-            실용성과 예술성을 결합하여 현대 가구 디자인의 기준을 세웠습니다.
+            의자의 구조적 특징을 어깨띠로 재해석하여, 의자를 사용하는 새로운 방식을 제안한다.
         </p>
-        <img src="https://via.placeholder.com/800x400" alt="의자 이미지">
+        <img src="01.png" alt="의자 이미지">
         </div>
 
     <script>
